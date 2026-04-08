@@ -1,0 +1,141 @@
+.arena {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 16px 20px;
+  margin: 0 auto 16px;
+  max-width: 520px;
+  min-height: 160px;
+}
+
+.arena__player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.arena__label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+}
+
+.arena__move {
+  width: 90px;
+  height: 90px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+  color: var(--text-dim);
+}
+
+.arena__move--empty {
+  border-style: dashed;
+}
+
+.arena__move--win {
+  border-color: var(--win);
+  background: var(--win-bg);
+  color: var(--win);
+  animation: pulse 0.6s ease-in-out 2;
+}
+
+.arena__move--lose {
+  border-color: var(--lose);
+  background: var(--lose-bg);
+  color: var(--lose);
+  opacity: 0.65;
+}
+
+.arena__move--draw {
+  border-color: var(--draw);
+  background: var(--draw-bg);
+  color: var(--draw);
+}
+
+.arena__move--reveal {
+  animation: scaleIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.arena__move--thinking {
+  animation: pulse 0.5s ease-in-out infinite;
+}
+
+.arena__choice-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-transform: capitalize;
+}
+
+/* VS badge */
+.arena__vs {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Result text */
+.arena__result {
+  text-align: center;
+  margin: 0 auto 12px;
+  padding: 8px 20px;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 700;
+  animation: fadeInUp 0.3s ease;
+  max-width: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.arena__result--win {
+  background: var(--win-bg);
+  border: 1px solid var(--win);
+  color: var(--win);
+}
+
+.arena__result--lose {
+  background: var(--lose-bg);
+  border: 1px solid var(--lose);
+  color: var(--lose);
+}
+
+.arena__result--draw {
+  background: var(--draw-bg);
+  border: 1px solid var(--draw);
+  color: var(--draw);
+}
+
+@media (max-width: 500px) {
+  .arena__move {
+    width: 72px;
+    height: 72px;
+  }
+  .arena__vs {
+    width: 32px;
+    height: 32px;
+    font-size: 0.65rem;
+  }
+}

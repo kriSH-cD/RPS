@@ -1,0 +1,42 @@
+.background-orbs {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.2;
+  animation: float 20s ease-in-out infinite alternate;
+}
+
+.orb--1 {
+  width: 450px;
+  height: 450px;
+  background: var(--paper);
+  top: -8%;
+  left: -8%;
+}
+
+.orb--2 {
+  width: 350px;
+  height: 350px;
+  background: var(--scissors);
+  bottom: -8%;
+  right: -8%;
+  animation-delay: -7s;
+}
+
+.orb--3 {
+  width: 280px;
+  height: 280px;
+  background: var(--rock);
+  top: 45%;
+  left: 55%;
+  opacity: 0.12;
+  animation-delay: -14s;
+}

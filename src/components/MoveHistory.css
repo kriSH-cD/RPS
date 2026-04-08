@@ -1,0 +1,131 @@
+.history {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+.history__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.history__title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+}
+
+.history__count {
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+.history__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.history__empty {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.history__item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  animation: slideInLeft 0.2s ease forwards;
+  font-size: 0.78rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.history__round-badge {
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.68rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.history__round-badge--win {
+  background: var(--win-bg);
+  color: var(--win);
+}
+
+.history__round-badge--lose {
+  background: var(--lose-bg);
+  color: var(--lose);
+}
+
+.history__round-badge--draw {
+  background: var(--draw-bg);
+  color: var(--draw);
+}
+
+.history__moves {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.history__moves strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.history__move-icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.history__move-icon--rock { color: var(--rock); }
+.history__move-icon--paper { color: var(--paper); }
+.history__move-icon--scissors { color: var(--scissors); }
+
+.history__result-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.history__result-tag--win {
+  background: var(--win-bg);
+  color: var(--win);
+}
+
+.history__result-tag--lose {
+  background: var(--lose-bg);
+  color: var(--lose);
+}
+
+.history__result-tag--draw {
+  background: var(--draw-bg);
+  color: var(--draw);
+}
